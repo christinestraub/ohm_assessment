@@ -47,7 +47,7 @@ class Config(dict):
         OL-7740 Pull from the production server, even in development mode, so we can see the
         images which would otherwise be blocked by the GMail image proxy when testing emails locally
         '''
-        return self.deep_get('custom', 'email_image_base_url') or 'https://login.ohmconnect.com'
+        return self.deep_get('custom', 'email_image_base_url')
 
     def redirect_url(self):
         return self.deep_get('custom', 'redirect_url')
